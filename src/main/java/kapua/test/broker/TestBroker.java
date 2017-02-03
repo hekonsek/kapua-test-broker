@@ -10,7 +10,8 @@ public class TestBroker {
         try {
             broker.setPersistent(false);
             broker.addConnector("mqtt://0.0.0.0:1883");
-//            broker.setPlugins(new BrokerPlugin[new KapuaBrokerPlugin()]);
+            // THIS IS WHERE WE CONNECT KAPUA WITH BROKER
+            //  broker.setPlugins(new BrokerPlugin[new KapuaBrokerPlugin()]);
             broker.start();
         } catch (Exception e) {
             throw new RuntimeException(e);
